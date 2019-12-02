@@ -2,9 +2,10 @@ var mainContainer = document.getElementsByTagName('canvas')[0];
 var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
-ctx.font = '16px serif';
 
 var player = new Player(40,105,'assets/Missile_01.png',100,200);
+displayScore(player.score);
+displayLives(player.lives);
 
 document.addEventListener('mousemove',(event) => {
    player.move(event.x,event.y)
@@ -22,10 +23,27 @@ function distacne(x1,y1,x2,y2) {
 function displayScore(score) {
     console.log(score)
     ctx.fillStyle = "white";
-    ctx.clearRect(mainContainer.width-100,mainContainer.height-30,500,500)
-    ctx.fillText("score : "+score,mainContainer.width-100,mainContainer.height-20)
+    ctx.font = '16px serif';
+    ctx.clearRect(mainContainer.width-500,mainContainer.height-40,500,500)
+    ctx.fillText("Score : "+score,mainContainer.width-100,mainContainer.height-20)
 }
 
+function displayLives(lives) {
+    ctx.fillStyle = "white";
+    ctx.font = '20px serif';
+    ctx.clearRect(0,mainContainer.height-60,300,500)
+    var image = new Image();
+    image.src = 'assets/HP_Bonus.png';
+    image.onload = function (){
+
+        ctx.drawImage(image,80,mainContainer.height-50,30,30);
+    }
+    ctx.fillText(lives+"X",50,mainContainer.height-30)
+}
+
+function gameOver() {
+    
+}
 var enemies = []
 
 setInterval(function () {
@@ -41,7 +59,7 @@ setInterval(function () {
 setInterval(function () {
     for(var i = 0;i<enemies.length;++i)
     {
-        if(enemies[i].y > mainContainer.height+500)
+        if(enemies[i].y > mainContainer.height-120)
         {
             enemies[i].kill()
             enemies.splice(i,1);
@@ -50,7 +68,13 @@ setInterval(function () {
 
         if(distacne(player.x,player.y,enemies[i].x,enemies[i].y)<40)
         {
-
+            player.lives--;
+            displayLives(player.lives);
+            enemies[i].kill()
+            enemies.splice(i,1);
+            player.clear()
+            player.draw()
+            continue;
         }
 
         for(var j = 0;j<player.bullets.length;++j)
