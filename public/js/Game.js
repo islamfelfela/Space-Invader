@@ -17,7 +17,10 @@ document.addEventListener('mousemove',(event) => {
 });
 
 document.addEventListener('click',function (event) {
-    player.fire()
+    if(!gameOverFlage)
+    {
+        player.fire()
+    }
 
 })
 
