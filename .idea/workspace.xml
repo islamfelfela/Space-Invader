@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a933a8e1-5088-40b9-ac37-37e3254a61bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/HP_Bonus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/bg.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Game.js" afterDir="false" />
@@ -67,7 +65,7 @@
       <workItem from="1575026142094" duration="9792000" />
       <workItem from="1575050151166" duration="12786000" />
       <workItem from="1575116885462" duration="224000" />
-      <workItem from="1575311583231" duration="4835000" />
+      <workItem from="1575311583231" duration="7385000" />
     </task>
     <servers />
   </component>

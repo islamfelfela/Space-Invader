@@ -3,12 +3,17 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
+var gameOverFlage = false
+
 var player = new Player(40,105,'assets/Missile_01.png',100,200);
 displayScore(player.score);
 displayLives(player.lives);
 
 document.addEventListener('mousemove',(event) => {
-   player.move(event.x,event.y)
+    if(!gameOverFlage)
+    {
+        player.move(event.x,event.y)
+    }
 });
 
 document.addEventListener('click',function (event) {
@@ -42,11 +47,19 @@ function displayLives(lives) {
 }
 
 function gameOver() {
-    
+
+    gameOverFlage = true
+    clearInterval(intervalEnemiesID)
+    player.clear()
+    ctx.clearRect(0,0,mainContainer.width,mainContainer.height)
+    ctx.fillStyle = "white";
+    ctx.font = '60px serif';
+    ctx.fillText("Game Over",mainContainer.width/2,mainContainer.height/2)
+
 }
 var enemies = []
 
-setInterval(function () {
+var intervalEnemiesID = setInterval(function () {
     var x = Math.random()*mainContainer.width
     var y = 0
     var enemy = new Enemy('assets/Crystal_02.png',x,y,35,50)
@@ -66,9 +79,14 @@ setInterval(function () {
             continue;
         }
 
-        if(distacne(player.x,player.y,enemies[i].x,enemies[i].y)<40)
+        if(distacne(player.x,player.y,enemies[i].x,enemies[i].y)<40&&!gameOverFlage)
         {
             player.lives--;
+            if(player.lives===0)
+            {
+                gameOver();
+                continue
+            }
             displayLives(player.lives);
             enemies[i].kill()
             enemies.splice(i,1);
@@ -79,6 +97,12 @@ setInterval(function () {
 
         for(var j = 0;j<player.bullets.length;++j)
         {
+            if(gameOverFlage)
+            {
+                player.bullets[j].kill()
+                player.bullets.splice(j,1);
+                continue
+            }
             if(player.bullets[j].y<-100)
             {
                 player.bullets[j].kill()
@@ -95,6 +119,12 @@ setInterval(function () {
                 player.score+=10;
                 displayScore(player.score);
             }
+        }
+
+        if(gameOverFlage)
+        {
+            enemies[i].kill()
+            enemies.splice(i,1);
         }
     }
 },50)
