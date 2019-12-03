@@ -3,7 +3,33 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-var player = new Player(40,105,'assets/Missile_01.png',100,200);
+
+var charId = window.location.search.substr(-1)
+var src;
+console.log(charId);
+
+
+switch (charId) {
+    case '1':
+        src = 'assets/Missile_01.png'   
+        break;
+
+    case '2':
+        src = 'assets/Bomb_01_1.png'
+        break;
+    
+    case '3':
+        src = 'assets/Crystal_03.png'
+        break;
+
+    default:
+        src = 1
+        break;
+}
+
+console.log(src);
+
+var player = new Player(40,105,src ,100,200);
 
 document.addEventListener('mousemove',(event) => {
    player.move(event.x,event.y)
