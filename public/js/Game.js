@@ -3,7 +3,6 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-<<<<<<< HEAD
 
 var charId = window.location.search.substr(-1)
 var src;
@@ -31,13 +30,11 @@ switch (charId) {
 console.log(src);
 
 var player = new Player(40,105,src ,100,200);
-=======
 var gameOverFlage = false
 
 var player = new Player(40,105,'assets/Missile_01.png',100,200);
 displayScore(player.score);
 displayLives(player.lives);
->>>>>>> adel
 
 document.addEventListener('mousemove',(event) => {
     if(!gameOverFlage)
