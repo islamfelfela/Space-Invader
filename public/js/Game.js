@@ -32,7 +32,6 @@ console.log(src);
 var player = new Player(40,105,src ,100,200);
 var gameOverFlage = false
 
-var player = new Player(40,105,'assets/Missile_01.png',100,200);
 displayScore(player.score);
 displayLives(player.lives);
 
