@@ -3,23 +3,29 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-
-var charId = window.location.search.substr(-1)
+localStorage.setItem("level",window.location.search.substr(-1))
+var charId = localStorage.getItem("char")
 var src;
-console.log(charId);
 
+var reokets = {
+    'first' : 'assets/Missile_01.png' ,
+    'second' : 'assets/Bomb_01_1.png' ,
+    'third' : 'assets/Crystal_03.png'
+}
+console.log(charId);
 
 switch (charId) {
     case '1':
-        src = 'assets/Missile_01.png'   
+        src = reokets['first']
         break;
 
     case '2':
-        src = 'assets/Bomb_01_1.png'
+        src = reokets['second']
         break;
     
     case '3':
-        src = 'assets/Crystal_03.png'
+        src = reokets['third']
+
         break;
 
     default:
@@ -27,7 +33,7 @@ switch (charId) {
         break;
 }
 
-console.log(src);
+
 
 var player = new Player(40,105,src ,100,200);
 var gameOverFlage = false
@@ -55,11 +61,11 @@ function distacne(x1,y1,x2,y2) {
 }
 
 function displayScore(score) {
-    console.log(score)
+    c console.log(score)
     ctx.fillStyle = "white";
     ctx.font = '16px serif';
-    ctx.clearRect(mainContainer.width-500,mainContainer.height-40,500,500)
-    ctx.fillText("Score : "+score,mainContainer.width-100,mainContainer.height-20)
+    ctx.clearRect(mainContainer.width-900,mainContainer.height-40,1000,500)
+    ctx.fillText("Score : "+score,mainContainer.width-100,mainContainer.height-70)
 }
 
 function displayLives(lives) {
@@ -77,14 +83,13 @@ function displayLives(lives) {
 
 function gameOver() {
 
-    gameOverFlage = true
+     gameOverFlage = true
     clearInterval(intervalEnemiesID)
     player.clear()
     ctx.clearRect(0,0,mainContainer.width,mainContainer.height)
     ctx.fillStyle = "white";
     ctx.font = '60px serif';
-    ctx.fillText("Game Over",mainContainer.width/2,mainContainer.height/2)
-
+    ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
 }
 var enemies = []
 

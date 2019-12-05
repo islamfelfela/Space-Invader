@@ -10,5 +10,7 @@ var btn = document.getElementsByTagName("input")[0]
 
         var btn = document.getElementsByTagName("input")[2]
         btn.addEventListener("click",(e)=>{
+
             window.location = "aboutus.html"
+
         })
