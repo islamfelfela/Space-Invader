@@ -3,7 +3,6 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-
 localStorage.setItem("level",window.location.search.substr(-1))
 var charId = localStorage.getItem("char")
 var src;
@@ -26,6 +25,7 @@ switch (charId) {
     
     case '3':
         src = reokets['third']
+
         break;
 
     default:
@@ -33,8 +33,6 @@ switch (charId) {
         break;
 }
 
-
-console.log(localStorage);
 
 
 var player = new Player(40,105,src ,100,200);
@@ -63,10 +61,10 @@ function distacne(x1,y1,x2,y2) {
 }
 
 function displayScore(score) {
-    console.log(score)
+    c console.log(score)
     ctx.fillStyle = "white";
     ctx.font = '16px serif';
-    ctx.clearRect(mainContainer.width-500,mainContainer.height-40,500,500)
+    ctx.clearRect(mainContainer.width-900,mainContainer.height-40,1000,500)
     ctx.fillText("Score : "+score,mainContainer.width-100,mainContainer.height-70)
 }
 
@@ -85,14 +83,13 @@ function displayLives(lives) {
 
 function gameOver() {
 
-    gameOverFlage = true
+     gameOverFlage = true
     clearInterval(intervalEnemiesID)
     player.clear()
     ctx.clearRect(0,0,mainContainer.width,mainContainer.height)
     ctx.fillStyle = "white";
     ctx.font = '60px serif';
     ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
-
 }
 var enemies = []
 
