@@ -5,7 +5,7 @@ var btn = document.getElementsByTagName("input")[0]
 
         var btn = document.getElementsByTagName("input")[1]
         btn.addEventListener("click",(e)=>{
-            window.location = "levels.html"
+            window.location = "howtoplay.html"
         })
 
         var btn = document.getElementsByTagName("input")[2]
