@@ -12,4 +12,4 @@ var btn = document.getElementsByTagName("input")
         window.location = "index.html?character=3level=3"
     });
 
-    localStorage.setItem("char",window.location.search.substr(-1))
+sessionStorage.setItem("char",window.location.search.substr(-1))

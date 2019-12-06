@@ -1,3 +1,5 @@
+
+"use strict";
 var btn = document.getElementsByTagName("input")[0]
         btn.addEventListener("click",(e)=>{
             window.location = "carecters.html"
@@ -14,3 +16,8 @@ var btn = document.getElementsByTagName("input")[0]
             window.location = "aboutus.html"
 
         })
+
+function main () {
+   localStorage.clear
+}
+main();

@@ -3,8 +3,8 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-localStorage.setItem("level",window.location.search.substr(-1))
-var charId = localStorage.getItem("char")
+
+var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
@@ -12,9 +12,9 @@ var reokets = {
     'second' : 'assets/Bomb_01_1.png' ,
     'third' : 'assets/Crystal_03.png'
 }
-console.log(charId);
 
-switch (charId) {
+
+switch (sessionStorage.char) {
     case '1':
         src = reokets['first']
         break;
@@ -31,6 +31,21 @@ switch (charId) {
     default:
         src = 1
         break;
+}
+var  EnemyDrawSpeed;
+
+switch(sessionStorage.level){
+    case '1':
+        EnemyDrawSpeed= 1500;
+        break;
+
+    case '2':
+        EnemyDrawSpeed = 1000;
+            break;
+
+    case '2':
+        EnemyDrawSpeed= 100;
+            break;
 }
 
 
@@ -99,7 +114,7 @@ var intervalEnemiesID = setInterval(function () {
     var enemy = new Enemy('assets/Crystal_02.png',x,y,35,50)
     enemies.push(enemy)
     enemy.move(10)
-},1500)
+},EnemyDrawSpeed)
 
 
 
@@ -162,7 +177,4 @@ setInterval(function () {
         }
     }
 },50)
-
-
-
 
