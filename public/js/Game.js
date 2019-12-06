@@ -32,6 +32,21 @@ switch (sessionStorage.char) {
         src = 1
         break;
 }
+var  EnemyDrawSpeed;
+
+switch(sessionStorage.level){
+    case '1':
+        EnemyDrawSpeed= 1500;
+        break;
+
+    case '2':
+        EnemyDrawSpeed = 1000;
+            break;
+
+    case '2':
+        EnemyDrawSpeed= 100;
+            break;
+}
 
 
 
@@ -99,7 +114,7 @@ var intervalEnemiesID = setInterval(function () {
     var enemy = new Enemy('assets/Crystal_02.png',x,y,35,50)
     enemies.push(enemy)
     enemy.move(10)
-},1500)
+},EnemyDrawSpeed)
 
 
 
@@ -162,7 +177,4 @@ setInterval(function () {
         }
     }
 },50)
-
-
-
 
