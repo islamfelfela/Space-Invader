@@ -61,7 +61,7 @@ function distacne(x1,y1,x2,y2) {
 }
 
 function displayScore(score) {
-    c console.log(score)
+    console.log(score)
     ctx.fillStyle = "white";
     ctx.font = '16px serif';
     ctx.clearRect(mainContainer.width-900,mainContainer.height-40,1000,500)

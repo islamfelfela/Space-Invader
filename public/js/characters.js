@@ -1,4 +1,4 @@
-var btn = document.getElementsByTagName("input")
+var btn = document.getElementsByTagName("img")
 
     btn[0].addEventListener("click", function(){
         window.location = "levels.html?character=1"
