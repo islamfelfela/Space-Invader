@@ -3,8 +3,8 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-localStorage.setItem("level",window.location.search.substr(-1))
-var charId = localStorage.getItem("char")
+
+var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
@@ -12,9 +12,9 @@ var reokets = {
     'second' : 'assets/Bomb_01_1.png' ,
     'third' : 'assets/Crystal_03.png'
 }
-console.log(charId);
 
-switch (charId) {
+
+switch (sessionStorage.char) {
     case '1':
         src = reokets['first']
         break;
