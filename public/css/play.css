@@ -55,7 +55,7 @@ body
     margin-top: 20px;
     margin-bottom: 80px;
     width: 100px;
-    margin-left: skyblud:;
+    /* margin-left: skyblud; */
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);

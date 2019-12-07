@@ -8,9 +8,9 @@ var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
-    'first' : 'assets/Missile_01.png' ,
-    'second' : 'assets/Bomb_01_1.png' ,
-    'third' : 'assets/Crystal_03.png'
+    'first' : 'assets/ch1.png' ,
+    'second' : 'assets/ch2.png' ,
+    'third' : 'assets/ch3.png'
 }
 
 
@@ -111,7 +111,7 @@ var enemies = []
 var intervalEnemiesID = setInterval(function () {
     var x = Math.random()*mainContainer.width
     var y = 0
-    var enemy = new Enemy('assets/Crystal_02.png',x,y,35,50)
+    var enemy = new Enemy('assets/enemy.png',x,y,35,50)
     enemies.push(enemy)
     enemy.move(10)
 },EnemyDrawSpeed)
