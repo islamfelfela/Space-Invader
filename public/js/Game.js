@@ -33,24 +33,6 @@ switch (rocket) {
         src = 1
         break;
 }
-/*var  EnemyDrawSpeed;
-
-switch(level){
-    case '1':
-        EnemyDrawSpeed= 1500;
-        break;
-
-    case '2':
-        EnemyDrawSpeed = 1250;
-            break;
-
-    case '3':
-        EnemyDrawSpeed= 1000;
-            break;
-}
-
-console.log("SSS",EnemyDrawSpeed)*/
-
 
 
 var player = new Player(40,105,src ,100,200);
@@ -162,7 +144,6 @@ setInterval(function () {
             }
             if(distacne(enemies[i].x,enemies[i].y,player.bullets[j].x,player.bullets[j].y)<40)
             {
-            //console.log(distacne(enemies[i].x,enemies[i].y,player.bullets[j].x,player.bullets[j].y))
                 enemies[i].kill()
                 player.bullets[j].kill()
                 enemies.splice(i,1);
