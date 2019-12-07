@@ -8,15 +8,9 @@ var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
-<<<<<<< HEAD
-    'first' : 'assets/images.jpg' ,
-    'second' : 'assets/Bomb_01_1.png' ,
-    'third' : 'assets/Crystal_03.png'
-=======
     'first' : 'assets/ch1.png' ,
     'second' : 'assets/ch2.png' ,
     'third' : 'assets/ch3.png'
->>>>>>> c9c73e28af83f1da4b81e9aacdba011ee4deac67
 }
 
 
@@ -110,7 +104,9 @@ function gameOver() {
     ctx.clearRect(0,0,mainContainer.width,mainContainer.height)
     ctx.fillStyle = "white";
     ctx.font = '60px serif';
-    ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
+    //ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
+     sessionStorage.setItem("FinalScore","scor")
+    window.location="Game_over.html"
 }
 var enemies = []
 
