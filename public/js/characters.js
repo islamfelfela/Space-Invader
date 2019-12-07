@@ -1,3 +1,7 @@
+window.onload = function() {
+    this.document.querySelector("audio").play();
+}
+
 var btn = document.getElementsByTagName("img")
 
     btn[0].addEventListener("click", function(){
@@ -15,5 +19,3 @@ var btn = document.getElementsByTagName("img")
         
     });
 
-
-    

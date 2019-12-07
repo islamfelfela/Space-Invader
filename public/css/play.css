@@ -55,10 +55,11 @@ body
 	font-size:28px;
 	font-weight:bold;
 	text-decoration:none;
-  text-shadow:1px 5px 17px #263666;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100px;
+    text-shadow:1px 5px 17px #263666;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    width: 100px;
+    /* margin-left: skyblud; */
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
