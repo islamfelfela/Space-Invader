@@ -4,9 +4,9 @@ body
 }
 .wrap
   {
-    width: 500px;
+    
+    
     margin: auto;
-    margin-top: 100px;
     display: inline;
 }
 .card {
@@ -16,7 +16,7 @@ body
   width: 300px;
   
 
-  background:olivedrab;
+
   text-align: center;
   font-size: medium;
   font-family:sans-serif;
@@ -29,5 +29,11 @@ body
 {
 
 box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+
+}
+
+h4{
+  color: brown;
+  font-weight: 300px;
 
 }

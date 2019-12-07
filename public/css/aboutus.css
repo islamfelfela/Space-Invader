@@ -11,7 +11,7 @@ body
 }
 
 .coupon {
-    border: 5px dotted skyblue;
+    border: 9px double skyblue;
     width: 80%;
     border-radius: 15px;
     margin: 350px;

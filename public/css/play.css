@@ -1,17 +1,21 @@
 body
 {
+    margin: 0px;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .coupon {
-    border: 5px dotted skyblue;
+    border: 9px double  skyblue;
     width: 80%;
     border-radius: 15px;
     margin: 350px;
     max-width: 600px;
-    margin-top: 25px;
-    display : inline-block;
+    height: auto;
+    margin-top: 15px;
+    display : block;
+    
+    
   }
   
   .container {
@@ -51,11 +55,10 @@ body
 	font-size:28px;
 	font-weight:bold;
 	text-decoration:none;
-    text-shadow:1px 5px 17px #263666;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    width: 100px;
-    margin-left: skyblud:;
+  text-shadow:1px 5px 17px #263666;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
