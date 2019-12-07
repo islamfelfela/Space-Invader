@@ -44,7 +44,7 @@ switch(sessionStorage.level){
             break;
 
     case '2':
-        EnemyDrawSpeed= 100;
+        EnemyDrawSpeed= 500;
             break;
 }
 
@@ -104,7 +104,9 @@ function gameOver() {
     ctx.clearRect(0,0,mainContainer.width,mainContainer.height)
     ctx.fillStyle = "white";
     ctx.font = '60px serif';
-    ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
+    //ctx.fillText("Game Over",mainContainer.width*0.35,mainContainer.height* 0.5)
+     sessionStorage.setItem("FinalScore","scor")
+    window.location="Game_over.html"
 }
 var enemies = []
 
