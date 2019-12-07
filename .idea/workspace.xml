@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a933a8e1-5088-40b9-ac37-37e3254a61bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Bullet.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Bullet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Enemy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/levels.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/levels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Player.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,7 @@
       <workItem from="1575116885462" duration="224000" />
       <workItem from="1575311583231" duration="7719000" />
       <workItem from="1575721160908" duration="104000" />
-      <workItem from="1575745507995" duration="6042000" />
+      <workItem from="1575745507995" duration="9769000" />
     </task>
     <servers />
   </component>

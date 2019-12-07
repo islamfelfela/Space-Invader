@@ -7,17 +7,17 @@ var Bullet = function (bullet,x,y,width,height) {
     this.intervalID
     this.image.src = bullet;
     this.image.onload=() => {
-        ctx.drawImage(this.image,this.x,this.y,this.width, this.height)
+        game.ctx.drawImage(this.image,this.x,this.y,this.width, this.height)
     }
 
 }
 
 Bullet.prototype.clear = function()  {
-    ctx.clearRect(this.x, this.y, this.width, this.height);
+    game.ctx.clearRect(this.x, this.y, this.width, this.height);
 }
 
 Bullet.prototype.draw = function() {
-    ctx.drawImage(this.image,this.x,this.y,this.width, this.height)
+    game.ctx.drawImage(this.image,this.x,this.y,this.width, this.height)
 }
 
 Bullet.prototype.kill = function(){

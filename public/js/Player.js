@@ -12,7 +12,7 @@ var Player = function (width, height, img, x, y) {
 }
 
 Player.prototype.draw=function () {
-     ctx.drawImage(this.image,
+     game.ctx.drawImage(this.image,
         this.x,
         this.y,
         this.width, this.height);
@@ -29,7 +29,7 @@ Player.prototype.move = function (x,y)
 }
 
 Player.prototype.clear = function()  {
-    ctx.clearRect(this.x,this.y, this.width, this.height);
+    game.ctx.clearRect(this.x,this.y, this.width, this.height);
 }
 
 Player.prototype.fire = function () {
