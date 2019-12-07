@@ -1,4 +1,3 @@
-// var canvas = document.getElementsByTagName('canvas')[0];
 var rocket = sessionStorage.getItem('rocket');
 var enemyDensity = sessionStorage.getItem('enemyDensity');
 var rockets = ['assets/rocket_01.png', 'assets/rocket_02.png', 'assets/rocket_03.png']
@@ -21,17 +20,15 @@ var Game = function (rocket, enemyDensity,canvas) {
 Game.prototype.generateEnemies = function ()
 {
     this.intervalEnemiesID = setInterval( ()=> {
-        var x = Math.random() * this.width
+        var x = (Math.random() * (this.width - 300))+130;
         var y = 0
-        var enemy = new Enemy('assets/enemy.png', x, y, 35, 50)
+        var enemy = new Enemy('assets/enemy.png', x, y, 50, 50)
         this.enemies.push(enemy)
         enemy.move(10)
     }, this.enemyDensity)
 }
 
 Game.prototype.displayScore =  function(score)  {
-    //console.log(score)
-    console.log(this.ctx)
     this.ctx.fillStyle = "white";
     this.ctx.font = '16px serif';
     this.ctx.clearRect(this.width - 900, this.height - 60, 1000, 500)
@@ -129,16 +126,15 @@ Game.prototype.init = function (){
     this.canvas.width = this.width;
     this.canvas.height = this.height;
     this.ctx = this.canvas.getContext('2d')
-    console.log(this.ctx)
     this.drawUI();
     this.runner();
     this.generateEnemies();
 }
 var canves = document.getElementsByTagName('canvas')[0];
-var game = new Game(rockets[rocket],enemyDensity,canves)
+var game = new Game(rockets[rocket-1],enemyDensity,canves)
 
 document.addEventListener('mousemove', (event) => {
-    if (!game.gameOverFlage) {
+    if (!game.gameOverFlage && event.x>120 && event.x<game.width-150) {
         game.player.move(event.x, event.y)
     }
 });
