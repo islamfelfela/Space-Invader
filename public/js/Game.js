@@ -14,7 +14,7 @@ var reokets = {
 }
 
 
-switch (sessionStorage.char) {
+switch (charId) {
     case '1':
         src = reokets['first']
         break;
@@ -33,6 +33,7 @@ switch (sessionStorage.char) {
         break;
 }
 
+
 var  EnemyDrawSpeed;
 
 switch(sessionStorage.level){
@@ -47,6 +48,10 @@ switch(sessionStorage.level){
     case '2':
         EnemyDrawSpeed= 100;
             break;
+
+    default:
+        EnemyDrawSpeed= 1000;
+        break;
 }
 
 
