@@ -7,8 +7,8 @@ mainContainer.width = window.innerWidth;
 var charId = sessionStorage.getItem("char")
 var src;
 
-var reokets = {
-    'first' : 'assets/ch1.png' ,
+var rockets = {
+    'first' : 'assets/ch1.gif' ,
     'second' : 'assets/ch2.png' ,
     'third' : 'assets/ch3.png'
 }
@@ -16,15 +16,15 @@ var reokets = {
 
 switch (sessionStorage.char) {
     case '1':
-        src = reokets['first']
+        src = rockets['first']
         break;
 
     case '2':
-        src = reokets['second']
+        src = rockets['second']
         break;
     
     case '3':
-        src = reokets['third']
+        src = rockets['third']
 
         break;
 
@@ -65,8 +65,7 @@ document.addEventListener('mousemove',(event) => {
 
 document.addEventListener('click',function (event) {
     if(!gameOverFlage)
-    {
-        player.fire()
+    {player.fire()
     }
 
 })
