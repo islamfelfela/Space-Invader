@@ -13,7 +13,7 @@ var Enemy = function (enemy,x,y,width,height) {
 }
 
 
-sessionStorage.setItem("level",window.location.search.substr(-1))
+/*sessionStorage.setItem("level",window.location.search.substr(-1))
 var  levelSpeed;
 
 switch(sessionStorage.level){
@@ -28,7 +28,7 @@ switch(sessionStorage.level){
     case '2':
             levelSpeed = 10;
             break;
-}
+}*/
 
 
 
@@ -50,5 +50,5 @@ Enemy.prototype.move = function (speed) {
         this.clear()
         this.y+=speed;
         this.draw();
-    },levelSpeed)
+    },100)
 }

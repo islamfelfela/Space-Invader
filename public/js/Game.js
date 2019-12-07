@@ -3,18 +3,19 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
+var rocket = sessionStorage.getItem('rocket');
+var enemyDensity = sessionStorage.getItem('enemyDensity');
 
-var charId = sessionStorage.getItem("char")
 var src;
 
 var rockets = {
-    'first' : 'assets/ch1.gif' ,
-    'second' : 'assets/ch2.png' ,
-    'third' : 'assets/ch3.png'
+    'first' : 'assets/rocket_01.png' ,
+    'second' : 'assets/rocket_02.png' ,
+    'third' : 'assets/rocket_03.png'
 }
 
 
-switch (sessionStorage.char) {
+switch (rocket) {
     case '1':
         src = rockets['first']
         break;
@@ -32,21 +33,23 @@ switch (sessionStorage.char) {
         src = 1
         break;
 }
-var  EnemyDrawSpeed;
+/*var  EnemyDrawSpeed;
 
-switch(sessionStorage.level){
+switch(level){
     case '1':
         EnemyDrawSpeed= 1500;
         break;
 
     case '2':
-        EnemyDrawSpeed = 1000;
+        EnemyDrawSpeed = 1250;
             break;
 
-    case '2':
-        EnemyDrawSpeed= 100;
+    case '3':
+        EnemyDrawSpeed= 1000;
             break;
 }
+
+console.log("SSS",EnemyDrawSpeed)*/
 
 
 
@@ -113,7 +116,7 @@ var intervalEnemiesID = setInterval(function () {
     var enemy = new Enemy('assets/enemy.png',x,y,35,50)
     enemies.push(enemy)
     enemy.move(10)
-},EnemyDrawSpeed)
+},enemyDensity)
 
 
 

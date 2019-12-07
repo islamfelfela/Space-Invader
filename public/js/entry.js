@@ -1,5 +1,5 @@
 var btn = document.getElementsByTagName("input");
-
+sessionStorage.clear();
 btn[0].addEventListener("click", (e) => {
     window.location = "rockets.html"
 })

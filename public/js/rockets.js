@@ -8,17 +8,20 @@ var rocket_03 = document.getElementById("rocket-03");
 
 
 rocket_01.addEventListener("click", function(){
-        window.location = "levels.html?rocket=1"
-        
+        sessionStorage.setItem('rocket','1');
+        window.location = "levels.html"
+
     });
 
 rocket_02.addEventListener("click", function(){
-        window.location = "levels.html?rocket=2"
-        
+        sessionStorage.setItem('rocket','2');
+        window.location = "levels.html"
+
     });
 
 rocket_03.addEventListener("click", function(){
-        window.location = "levels.html?rocket=3"
-        
+        sessionStorage.setItem('rocket','3');
+        window.location = "levels.html"
+
     });
 
