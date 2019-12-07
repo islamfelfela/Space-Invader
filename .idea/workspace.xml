@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a933a8e1-5088-40b9-ac37-37e3254a61bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/Crystal_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/Crystal_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/Crystal_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/rocket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/rocket01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/space-911785_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/carecters.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/rockets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/entry.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/entry.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/entry.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/entry.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/character.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/rockets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/characters.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/rockets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/rockets.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/rockets.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +68,7 @@
       <workItem from="1575116885462" duration="224000" />
       <workItem from="1575311583231" duration="7719000" />
       <workItem from="1575721160908" duration="104000" />
-      <workItem from="1575745507995" duration="1681000" />
+      <workItem from="1575745507995" duration="2536000" />
     </task>
     <servers />
   </component>
