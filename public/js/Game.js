@@ -57,7 +57,7 @@ displayScore(player.score);
 displayLives(player.lives);
 
 document.addEventListener('mousemove',(event) => {
-    if(!gameOverFlage)
+    if(!gameOverFlage&&event.y<mainContainer.height-150)
     {
         player.move(event.x,event.y)
     }
