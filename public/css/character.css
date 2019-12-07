@@ -2,3 +2,54 @@ body
 {
     background-size: cover;
 }
+
+#ch1{
+    cursor: pointer;
+    width: 380px;
+    height: 380px;
+    margin-left: 20px;
+}
+
+#ch2{
+    cursor: pointer;
+    width: 450px;
+    height: 450px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#ch3{
+    cursor: pointer;
+    width: 380px;
+    height: 380px;
+    margin-left: 20px;
+}
+
+#choose{
+    width: 100%;
+    margin-top: 20px;
+}
+/* #ch1{
+    width: 280px;
+    height: 280px;
+    display: inline-block;
+    margin-left: 540px;s
+    margin-top: 20px;
+}
+
+#ch2{
+    width: 350px;
+    height: 350px;
+    margin-left: 200px;
+    margin-bottom: 55px;
+    display: inline-block;
+}
+
+#ch3{
+    width: 300px;
+    height: 300px;
+    margin-left: 300px;
+    margin-top: 0;
+    margin-bottom: 70px;
+} */
+

@@ -3,18 +3,18 @@ var ctx = mainContainer.getContext('2d');
 mainContainer.height = window.innerHeight;
 mainContainer.width = window.innerWidth;
 
-localStorage.setItem("level",window.location.search.substr(-1))
-var charId = localStorage.getItem("char")
+
+var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
-    'first' : 'assets/Missile_01.png' ,
-    'second' : 'assets/Bomb_01_1.png' ,
-    'third' : 'assets/Crystal_03.png'
+    'first' : 'assets/ch1.png' ,
+    'second' : 'assets/ch2.png' ,
+    'third' : 'assets/ch3.png'
 }
-console.log(charId);
 
-switch (charId) {
+
+switch (sessionStorage.char) {
     case '1':
         src = reokets['first']
         break;
@@ -31,6 +31,21 @@ switch (charId) {
     default:
         src = 1
         break;
+}
+var  EnemyDrawSpeed;
+
+switch(sessionStorage.level){
+    case '1':
+        EnemyDrawSpeed= 1500;
+        break;
+
+    case '2':
+        EnemyDrawSpeed = 1000;
+            break;
+
+    case '2':
+        EnemyDrawSpeed= 100;
+            break;
 }
 
 
@@ -61,7 +76,7 @@ function distacne(x1,y1,x2,y2) {
 }
 
 function displayScore(score) {
-    c console.log(score)
+    console.log(score)
     ctx.fillStyle = "white";
     ctx.font = '16px serif';
     ctx.clearRect(mainContainer.width-900,mainContainer.height-40,1000,500)
@@ -96,10 +111,10 @@ var enemies = []
 var intervalEnemiesID = setInterval(function () {
     var x = Math.random()*mainContainer.width
     var y = 0
-    var enemy = new Enemy('assets/Crystal_02.png',x,y,35,50)
+    var enemy = new Enemy('assets/enemy.png',x,y,35,50)
     enemies.push(enemy)
     enemy.move(10)
-},1500)
+},EnemyDrawSpeed)
 
 
 
@@ -162,7 +177,4 @@ setInterval(function () {
         }
     }
 },50)
-
-
-
 

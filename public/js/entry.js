@@ -1,15 +1,16 @@
-var btn = document.getElementsByTagName("input")[0]
-        btn.addEventListener("click",(e)=>{
+var btn = document.getElementsByTagName("input");
+
+        btn[0].addEventListener("click",(e)=>{
             window.location = "carecters.html"
         })
 
-        var btn = document.getElementsByTagName("input")[1]
-        btn.addEventListener("click",(e)=>{
+        
+        btn[1].addEventListener("click",(e)=>{
             window.location = "howtoplay.html"
         })
 
-        var btn = document.getElementsByTagName("input")[2]
-        btn.addEventListener("click",(e)=>{
+        
+        btn[2].addEventListener("click",(e)=>{
 
             window.location = "aboutus.html"
 
