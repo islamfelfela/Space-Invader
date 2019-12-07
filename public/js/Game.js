@@ -8,7 +8,7 @@ var charId = sessionStorage.getItem("char")
 var src;
 
 var reokets = {
-    'first' : 'assets/Missile_01.png' ,
+    'first' : 'assets/images.jpg' ,
     'second' : 'assets/Bomb_01_1.png' ,
     'third' : 'assets/Crystal_03.png'
 }
@@ -44,7 +44,7 @@ switch(sessionStorage.level){
             break;
 
     case '2':
-        EnemyDrawSpeed= 100;
+        EnemyDrawSpeed= 500;
             break;
 }
 
