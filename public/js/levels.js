@@ -1,15 +1,16 @@
 var btn = document.getElementsByTagName("input")
 
     btn[0].addEventListener("click", function(){
-        window.location = "index.html?character=1level=1"
+        sessionStorage.setItem('enemyDensity','1500');
+         window.location = "game.html"
     });
 
     btn[1].addEventListener("click", function(){
-        window.location = "index.html?character=2level=2"
-    });
-       
-    btn[2].addEventListener("click", function(){
-        window.location = "index.html?character=3level=3"
+        sessionStorage.setItem('enemyDensity','1250');
+         window.location = "game.html"
     });
 
-sessionStorage.setItem("char",window.location.search.substr(-1))
+    btn[2].addEventListener("click", function(){
+        sessionStorage.setItem('enemyDensity','1000');
+        window.location = "game.html"
+    });
