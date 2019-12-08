@@ -1,12 +1,12 @@
 var btn = document.getElementsByTagName("input")
 
     btn[0].addEventListener("click", function(){
-        sessionStorage.setItem('enemyDensity','1500');
+        sessionStorage.setItem('enemyDensity','1400');
          window.location = "game.html"
     });
 
     btn[1].addEventListener("click", function(){
-        sessionStorage.setItem('enemyDensity','1250');
+        sessionStorage.setItem('enemyDensity','1200');
          window.location = "game.html"
     });
 

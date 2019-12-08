@@ -3,6 +3,7 @@ var enemyDensity = sessionStorage.getItem('enemyDensity');
 var rockets = ['assets/rocket_01.png', 'assets/rocket_02.png', 'assets/rocket_03.png']
 
 var Game = function (rocket, enemyDensity,canvas) {
+    // console.log(enemyDensity);
     this.width = window.innerWidth;
     this.height = window.innerHeight;
     this.enemyDensity = enemyDensity;
@@ -21,9 +22,9 @@ Game.prototype.generateEnemies = function ()
 {
     this.intervalEnemiesID = setInterval( ()=> {
         var x = (Math.random() * (this.width - 300))+130;
-        var y = 0
-        var enemy = new Enemy('assets/enemy.png', x, y, 50, 50)
-        this.enemies.push(enemy)
+        var y = 0;
+        var enemy = new Enemy('assets/enemy.png', x, y, 50, 50);
+        this.enemies.push(enemy);
         enemy.move(10)
     }, this.enemyDensity)
 }
