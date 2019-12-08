@@ -7,24 +7,24 @@ mainContainer.width = window.innerWidth;
 var charId = sessionStorage.getItem("char")
 var src;
 
-var reokets = {
+var rockets = {
     'first' : 'assets/ch1.png' ,
     'second' : 'assets/ch2.png' ,
-    'third' : 'assets/ch3.png'
+    'third' : 'assets/rocket01.png'
 }
 
 
 switch (charId) {
     case '1':
-        src = reokets['first']
+        src = rockets['first']
         break;
 
     case '2':
-        src = reokets['second']
+        src = rockets['second']
         break;
     
     case '3':
-        src = reokets['third']
+        src = rockets['third']
 
         break;
 
